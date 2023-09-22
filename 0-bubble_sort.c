@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "sort.h"
 
-void print_array(int arr[], int arr_length);
+
 /**
  * bubble_sort - Implementation of BubbleSort Using C language
  * @array: the array needed to sorted.
@@ -13,10 +14,12 @@ void bubble_sort(int *array, size_t size)
 {
 	int arr_length = size;
 	int temp;
+	int i;
+	int j;
 
-	for (int i = 0; i < arr_length; i++)
+	for (i = 0; i < arr_length; i++)
 	{
-		for (int j = 1; j < arr_length - i; j++)
+		for (j = 1; j < arr_length - i; j++)
 		{
 			if (array[j] < array[j - 1])
 			{
@@ -27,20 +30,4 @@ void bubble_sort(int *array, size_t size)
 			}
 		}
 	}
-}
-
-/**
- * print_array - to print any array we want.
- * @arr:  the array needed to printed
- * @arr_length: the length of array needed to printed
-*/
-void print_array(int arr[], int arr_length)
-{
-	for (int k = 0; k < arr_length; k++)
-	{
-		printf("%d", arr[k]);
-		if (k + 1 != arr_length)
-		printf(" ", arr[k]);
-	}
-	printf("\n");
 }
