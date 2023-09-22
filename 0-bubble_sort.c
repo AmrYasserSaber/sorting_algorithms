@@ -33,7 +33,6 @@ void bubble_sort(int *array, size_t size)
  * print_array - to print any array we want.
  * @arr:  the array needed to printed
  * @arr_length: the length of array needed to printed
- * 
 */
 void print_array(int arr[], int arr_length)
 {
