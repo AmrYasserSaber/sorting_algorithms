@@ -16,6 +16,11 @@ void insertion_sort_list(listint_t **list)
 
 	if (!*list)
 	return;
+	if (!(*list)->next)
+	{
+		print_list(*list);
+		return;
+	}
 
 	tmp = *list;
 	curr = tmp->next;
@@ -28,8 +33,8 @@ void insertion_sort_list(listint_t **list)
 			*(int *)&tmp->next->n = tmp->n;
 			prev_node  = tmp;
 			tmp = tmp->prev;
-		*(int *)&prev_node->n = n;
-		print_list(*list);
+			*(int *)&prev_node->n = n;
+			print_list(*list);
 		}
 
 		tmp = curr;
@@ -39,5 +44,4 @@ void insertion_sort_list(listint_t **list)
 		else
 			break;
 	}
-
 }
