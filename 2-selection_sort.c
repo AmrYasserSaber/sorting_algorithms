@@ -1,5 +1,7 @@
 #include <stddef.h>
+#include <stdbool.h>
 #include "sort.h"
+
 /**
  * selection_sort - Implementation of selection_sort using C language
  * @array: the array needed to sorted
@@ -12,6 +14,7 @@ void selection_sort(int *array, size_t size)
 	int i = 0;
 	int j = 0;
 	int min, tmp;
+	bool flag = true;
 
 	if (array == NULL)
 		return;
@@ -25,11 +28,16 @@ void selection_sort(int *array, size_t size)
 			if (array[min] > array[j])
 			{
 				min = j;
+				flag = true;
 			}
 		}
 		tmp = array[i];
 		array[i] = array[min];
 		array[min] = tmp;
-		print_array(array, arr_length);
+		if (flag)
+		{
+			print_array(array, arr_length);
+			flag = false;
+		}
 	}
 }
