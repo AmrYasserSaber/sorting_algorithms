@@ -6,5 +6,4 @@ if [ $? -ne 1 ]; then
 	git add *
 	git commit -m "Upload File $1"
 	git push
-
 fi

@@ -4,7 +4,7 @@
  * insertion_sort_list - Write a function that sorts a doubly linked
  *  list of integers in ascending order using the Insertion sort algorithm
  * @list:  our linked list
- * Return: this function didn't return anything it only 
+ * Return: this function didn't return anything it only
  * because it make sort in place
 */
 
@@ -20,21 +20,21 @@ void insertion_sort_list(listint_t **list)
 	tmp = *list;
 	curr = tmp->next;
 
-	while(tmp != NULL)
+	while (tmp != NULL)
 	{
 		n = curr->n;
-		while(tmp && tmp->next && n < tmp->n)
+		while (tmp && tmp->next && n < tmp->n)
 		{
 			*(int *)&tmp->next->n = tmp->n;
 			prev_node  = tmp;
 			tmp = tmp->prev;
 		}
 
-		*(int *) & prev_node->n = n;
+		*(int *)&prev_node->n = n;
 		tmp = curr;
 		print_list(*list);
 
-		if(curr && curr->next)
+		if (curr && curr->next)
 			curr = curr->next;
 		else
 			break;
