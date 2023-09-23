@@ -6,8 +6,6 @@
  * @size: the size of the array
  * Return: Didn't Return anything it sort array in place
 */
-
-
 void selection_sort(int *array, size_t size)
 {
 	int arr_length = size;
