@@ -87,8 +87,9 @@ void counting_sort(int *array, size_t size)
 	int max;
 	int array_size = size;
 
-	max = get_max(array, array_size);
-	if (!array || size < 2)
+	if (array == NULL || size < 1)
 		return;
+
+	max = get_max(array, array_size);
 	counting_array(array, array_size, max);
 }
