@@ -51,7 +51,6 @@ void sort_counting_array(int *count, int *array, int size)
 		/*printf("current is %d %d\n", go_from_main_array, go_from_count);*/
 		count[go_from_main_array]--;
 	}
-	print_array(array, size);
 }
 /**
  * counting_array - use to create a counting array.
