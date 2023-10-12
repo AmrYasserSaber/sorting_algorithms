@@ -28,11 +28,10 @@ int  partition(int *arr, int l, int h, int size)
 				arr[j] = tmp;
 				print_array(arr, size);
 			}
-
 		}
 	}
 	tmp = arr[i + 1];
-	if (h != i + 1)
+	if (arr[h] != arr[i + 1])
 	{
 		arr[i + 1] = arr[h];
 		arr[h] = tmp;
