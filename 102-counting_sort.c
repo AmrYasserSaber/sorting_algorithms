@@ -77,7 +77,7 @@ void counting_array(int *array, int size, int max)
 	print_array(count, max + 1);
 	sort_counting_array(count, array, size);
 	free(count);
-	
+
 }
 /**
  * counting_sort - The main couting sort function
