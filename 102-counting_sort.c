@@ -51,6 +51,7 @@ void sort_counting_array(int *count, int *array, int size)
 		/*printf("current is %d %d\n", go_from_main_array, go_from_count);*/
 		count[go_from_main_array]--;
 	}
+	free(sallow_copy)
 }
 /**
  * counting_array - use to create a counting array.
@@ -76,6 +77,7 @@ void counting_array(int *array, int size, int max)
 	print_array(count, max + 1);
 	sort_counting_array(count, array, size);
 	free(count);
+	
 }
 /**
  * counting_sort - The main couting sort function
