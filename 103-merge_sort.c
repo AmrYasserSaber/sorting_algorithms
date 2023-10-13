@@ -38,14 +38,13 @@ void print_needed(int *arr1, int *arr2, int arr1_size, int arr2_size)
  * @l: left size of array
  * @m: size mid indx
  * @r: right size of array
- * @size: size
 */
-void merge_array(int *array, int l, int m, int r, int size)
+void merge_array(int *array, int l, int m, int r)
 {
 	int arr1_size = m - l + 1;
 	int arr2_size = r  - m;
 	int arr1_pointer, arr2_pointer = 0;
-	int i, j, k = 0;
+	int k = 0;
 	int *arr1 = malloc(sizeof(int) * arr1_size);
 	int *arr2 = malloc(sizeof(int) * arr2_size);
 
@@ -98,7 +97,7 @@ void divide_array(int *array, int l, int r, int size)
 
 		divide_array(array, l, m, size);
 		divide_array(array, m + 1, r, size);
-		merge_array(array, l, m, r, size);
+		merge_array(array, l, m, r);
 	}
 }
 /**
